@@ -1,3 +1,5 @@
+tags: [SMB, CPTS, Enumeration, Pentesting, OSCP, CTF]
+
 # CPTS_NOtes
  Practical, command-focused notes for mastering
 # 🛡️ CPTS_Notes
