@@ -1,0 +1,55 @@
+sudo apt update
+sudo apt install enum4linux -y
+
+git clone https://github.com/cddmp/enum4linux-ng.git
+cd enum4linux-ng
+pip3 install -r requirements.txt
+
+
+Basic Usage 
+enum4linux -a <target>
+
+Sample: 
+
+# Full enumeration on the target machine
+enum4linux -a 192.168.94.140
+
+
+Shortened Output:
+ ========================================= 
+|    Target Information Gathering        |
+ ========================================= 
+
+[+] Server Operating System: Windows Server 2016
+[+] NetBIOS Name: WIN-SERVER
+[+] NetBIOS Domain: WORKGROUP
+[+] DNS Domain: win.local
+[+] Users found:
+    Administrator
+    Guest
+    john
+    alice
+
+[+] Shares found:
+    IPC$
+    ADMIN$
+    SharedDocs
+
+[+] Password Policy:
+    - Min Password Length: 6
+    - Password History Length: 24
+
+Common Flags:
+
+Flag	Description
+-a	Run all enumeration options
+-u <user>	Provide a username
+-p <pass>	Provide a password
+-U	Enumerate users
+-S	Enumerate shares
+-G	Enumerate groups
+-P	Enumerate password policies
+-o	OS information
+-r	RID cycling (default range 500–550)
+-R	Reverse lookup for hosts in a range
+
